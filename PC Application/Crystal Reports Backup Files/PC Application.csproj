@@ -1,0 +1,619 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BA0ABF98-49C7-435C-BC31-F71667CDADA4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PC_Application</RootNamespace>
+    <AssemblyName>Track And Trace</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BCIL.Socket.Client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\BCIL.Socket.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="BcilLib, Version=4.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\BcilLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Connecter, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Connecter\Connecter\bin\Debug\Connecter.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="excelExport, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\excelExport.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenNETCF.Desktop.Communication, Version=2.9.2244.24857, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\OpenNETCF.Desktop.Communication.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dsSummary.cs">
+      <DependentUpon>dsSummary.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dsSummary.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSummary.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\clsDb.cs" />
+    <Compile Include="Modules\clsFile.cs" />
+    <Compile Include="Modules\clsGlobal.cs" />
+    <Compile Include="Modules\clsNetwork.cs" />
+    <Compile Include="Modules\clsStandards.cs" />
+    <Compile Include="Modules\MicroScan.cs" />
+    <Compile Include="PrintDirect.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmEventRpt.resx">
+      <DependentUpon>frmEventRpt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmParentChildRpt.resx">
+      <DependentUpon>frmParentChildRpt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmReportPre.resx">
+      <DependentUpon>frmReportPre.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmSecondUnutlized.resx">
+      <DependentUpon>frmSecondUnutlized.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmSecRpt.resx">
+      <DependentUpon>frmSecRpt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmSummaryRpt.resx">
+      <DependentUpon>frmSummaryRpt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmTerRpt.resx">
+      <DependentUpon>frmTerRpt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmTerteryUntilized.resx">
+      <DependentUpon>frmTerteryUntilized.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmUploadReport.resx">
+      <DependentUpon>frmUploadReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmWrongPack.resx">
+      <DependentUpon>frmWrongPack.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptSummary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSummary.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scanning\frmMicroscan.resx">
+      <DependentUpon>frmMicroscan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scanning\frmDownload.resx">
+      <DependentUpon>frmDownload.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scanning\frmOnlineScanning1.resx">
+      <DependentUpon>frmOnlineScanning1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scanning\frmUpload.resx">
+      <DependentUpon>frmUpload.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scanning\ManualScanning.resx">
+      <DependentUpon>ManualScanning.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Startup\frmChangePwd.resx">
+      <DependentUpon>frmChangePwd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Startup\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Startup\MDIMain.resx">
+      <DependentUpon>MDIMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sync\frmTransSync.resx">
+      <DependentUpon>frmTransSync.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sync\Master_Sync.resx">
+      <DependentUpon>Master_Sync.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmBatchCreation.resx">
+      <DependentUpon>frmBatchCreation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmCancelRequest.resx">
+      <DependentUpon>frmCancelRequest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmCancelSerial.resx">
+      <DependentUpon>frmCancelSerial.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmGenReq.resx">
+      <DependentUpon>frmGenReq.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmJobCreate.resx">
+      <DependentUpon>frmJobCreate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmPrinting.resx">
+      <DependentUpon>frmPrinting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reports\frmEventRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmEventRpt.Designer.cs">
+      <DependentUpon>frmEventRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmParentChildRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmParentChildRpt.designer.cs">
+      <DependentUpon>frmParentChildRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmReportPre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmReportPre.Designer.cs">
+      <DependentUpon>frmReportPre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmSecondUnutlized.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmSecondUnutlized.designer.cs">
+      <DependentUpon>frmSecondUnutlized.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmSecRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmSecRpt.Designer.cs">
+      <DependentUpon>frmSecRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmSummaryRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmSummaryRpt.Designer.cs">
+      <DependentUpon>frmSummaryRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmTerRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmTerRpt.Designer.cs">
+      <DependentUpon>frmTerRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmTerteryUntilized.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmTerteryUntilized.designer.cs">
+      <DependentUpon>frmTerteryUntilized.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmUploadReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmUploadReport.Designer.cs">
+      <DependentUpon>frmUploadReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmWrongPack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmWrongPack.Designer.cs">
+      <DependentUpon>frmWrongPack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptSummary.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSummary.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Scanning\frmMicroscan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scanning\frmMicroscan.Designer.cs">
+      <DependentUpon>frmMicroscan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scanning\frmDownload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scanning\frmDownload.Designer.cs">
+      <DependentUpon>frmDownload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scanning\frmOnlineScanning1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scanning\frmOnlineScanning1.Designer.cs">
+      <DependentUpon>frmOnlineScanning1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scanning\frmUpload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scanning\frmUpload.Designer.cs">
+      <DependentUpon>frmUpload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scanning\ManualScanning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scanning\ManualScanning.Designer.cs">
+      <DependentUpon>ManualScanning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Startup\frmChangePwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Startup\frmChangePwd.Designer.cs">
+      <DependentUpon>frmChangePwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Startup\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Startup\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Startup\MDIMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Startup\MDIMain.designer.cs">
+      <DependentUpon>MDIMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\frmTransSync.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sync\frmTransSync.Designer.cs">
+      <DependentUpon>frmTransSync.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\Master_Sync.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sync\Master_Sync.Designer.cs">
+      <DependentUpon>Master_Sync.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmBatchCreation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmBatchCreation.Designer.cs">
+      <DependentUpon>frmBatchCreation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmCancelRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmCancelRequest.Designer.cs">
+      <DependentUpon>frmCancelRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmCancelSerial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmCancelSerial.Designer.cs">
+      <DependentUpon>frmCancelSerial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmGenReq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmGenReq.Designer.cs">
+      <DependentUpon>frmGenReq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmJobCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmJobCreate.Designer.cs">
+      <DependentUpon>frmJobCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmPrinting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmPrinting.Designer.cs">
+      <DependentUpon>frmPrinting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Cantral\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\320px-Computer-aj_aj_ashton_01.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\version.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Change_Password_Icon-4d00bb6f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pass_icon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pass_icon1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pass_icon %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pass_icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcode_scanner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcode_scanner1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mapp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Outward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reject.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mapping.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\change-password.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\production copyleft.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\layers map.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door out.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\untitled3.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy new.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <None Include="Resources\754055-blue-backgrounds.jpg" />
+    <None Include="Resources\fig1.png" />
+    <None Include="Resources\Copy of Logo.jpeg" />
+    <None Include="Web References\Cantral\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Cantral\Service.disco" />
+    <None Include="dsSummary.xsc">
+      <DependentUpon>dsSummary.xsd</DependentUpon>
+    </None>
+    <None Include="dsSummary.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSummary.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsSummary.xss">
+      <DependentUpon>dsSummary.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\back1.jpg" />
+    <None Include="Resources\back.jpg" />
+    <None Include="Resources\report_check1.png" />
+    <None Include="Web References\Cantral\Service.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://49.248.166.126/DGFT_Central/Service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Cantral\</RelPath>
+      <UpdateFromURL>http://49.248.166.126/DGFT_Central/Service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PC_Application_Cantral_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{10FC9534-4A84-4F2E-91AA-9F864EAF5732}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
+      <Project>{79DC03AE-A7FE-41F5-BEB7-DEE7EF32EB19}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PrpertyLayer\PropertyLayer.csproj">
+      <Project>{1F23417D-FE0B-4559-AA03-0923AA3F6145}</Project>
+      <Name>PropertyLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

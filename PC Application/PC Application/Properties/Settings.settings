@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PC_Application.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="setPrinter" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="strLine" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="filepath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\Nirav\Serial.csv</Value>
+    </Setting>
+    <Setting Name="PC_Application_Cantral_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://49.248.166.126/DGFT_Central/Service.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

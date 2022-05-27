@@ -1,0 +1,1242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CTSLinkSaveBatchDT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="PLANT" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CTSLinkSaveBatchDTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CTSLinkSaveBatchDTResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LinkGenHdrDt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="PLANT" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LinkGenHdrDtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LinkGenHdrDtResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LinkSecTransDt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="PLANT" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LinkSecTransDtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LinkSecTransDtResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LinkTerTransDt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="PLANT" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LinkTerTransDtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LinkTerTransDtResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LinkSecRejDt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LinkSecRejDtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LinkSecRejDtResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LinkTerRejDt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LinkTerRejDtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LinkTerRejDtResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LinkTransBytesDt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sData" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="strBatch" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPlant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUsername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strBCIL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPacking" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LinkTransBytesDtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LinkTransBytesDtResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LinkRelationDt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="PLANT" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LinkRelationDtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LinkRelationDtResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LinkInwardDt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="PLANT" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LinkInwardDtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LinkInwardDtResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LinkOutWardDt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="PLANT" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LinkOutWardDtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LinkOutWardDtResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadMapping">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadMappingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadMappingResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STCCOMPANYMaster">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPlant" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STCCOMPANYMasterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="STCCOMPANYMasterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STCCONSIGNEEMaster">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPlant" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STCCONSIGNEEMasterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="STCCONSIGNEEMasterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STCGTINMaster">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPlant" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STCGTINMasterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="STCGTINMasterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STCLABEL_DESIGNMaster">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPlant" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STCLABEL_DESIGNMasterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="STCLABEL_DESIGNMasterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STCLABELTYPEMaster">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPlant" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STCLABELTYPEMasterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="STCLABELTYPEMasterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STCLINEMaster">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPlant" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STCLINEMasterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="STCLINEMasterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STCLINETYPEMaster">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPlant" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STCLINETYPEMasterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="STCLINETYPEMasterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STCPACKINGLEVELMaster">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPlant" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STCPACKINGLEVELMasterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="STCPACKINGLEVELMasterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STCPLANTMaster">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPlant" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STCPLANTMasterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="STCPLANTMasterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STCPRINTERMaster">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPlant" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STCPRINTERMasterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="STCPRINTERMasterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STCPRINTMETHODMaster">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPlant" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STCPRINTMETHODMasterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="STCPRINTMETHODMasterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STCUSERMaster">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPlant" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STCUSERMasterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="STCUSERMasterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STCUSERROLESMaster">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPlant" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STCUSERROLESMasterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="STCUSERROLESMasterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="CTSLinkSaveBatchDTSoapIn">
+    <wsdl:part name="parameters" element="tns:CTSLinkSaveBatchDT" />
+  </wsdl:message>
+  <wsdl:message name="CTSLinkSaveBatchDTSoapOut">
+    <wsdl:part name="parameters" element="tns:CTSLinkSaveBatchDTResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinkGenHdrDtSoapIn">
+    <wsdl:part name="parameters" element="tns:LinkGenHdrDt" />
+  </wsdl:message>
+  <wsdl:message name="LinkGenHdrDtSoapOut">
+    <wsdl:part name="parameters" element="tns:LinkGenHdrDtResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinkSecTransDtSoapIn">
+    <wsdl:part name="parameters" element="tns:LinkSecTransDt" />
+  </wsdl:message>
+  <wsdl:message name="LinkSecTransDtSoapOut">
+    <wsdl:part name="parameters" element="tns:LinkSecTransDtResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinkTerTransDtSoapIn">
+    <wsdl:part name="parameters" element="tns:LinkTerTransDt" />
+  </wsdl:message>
+  <wsdl:message name="LinkTerTransDtSoapOut">
+    <wsdl:part name="parameters" element="tns:LinkTerTransDtResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinkSecRejDtSoapIn">
+    <wsdl:part name="parameters" element="tns:LinkSecRejDt" />
+  </wsdl:message>
+  <wsdl:message name="LinkSecRejDtSoapOut">
+    <wsdl:part name="parameters" element="tns:LinkSecRejDtResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinkTerRejDtSoapIn">
+    <wsdl:part name="parameters" element="tns:LinkTerRejDt" />
+  </wsdl:message>
+  <wsdl:message name="LinkTerRejDtSoapOut">
+    <wsdl:part name="parameters" element="tns:LinkTerRejDtResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinkTransBytesDtSoapIn">
+    <wsdl:part name="parameters" element="tns:LinkTransBytesDt" />
+  </wsdl:message>
+  <wsdl:message name="LinkTransBytesDtSoapOut">
+    <wsdl:part name="parameters" element="tns:LinkTransBytesDtResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinkRelationDtSoapIn">
+    <wsdl:part name="parameters" element="tns:LinkRelationDt" />
+  </wsdl:message>
+  <wsdl:message name="LinkRelationDtSoapOut">
+    <wsdl:part name="parameters" element="tns:LinkRelationDtResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinkInwardDtSoapIn">
+    <wsdl:part name="parameters" element="tns:LinkInwardDt" />
+  </wsdl:message>
+  <wsdl:message name="LinkInwardDtSoapOut">
+    <wsdl:part name="parameters" element="tns:LinkInwardDtResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinkOutWardDtSoapIn">
+    <wsdl:part name="parameters" element="tns:LinkOutWardDt" />
+  </wsdl:message>
+  <wsdl:message name="LinkOutWardDtSoapOut">
+    <wsdl:part name="parameters" element="tns:LinkOutWardDtResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadMappingSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadMapping" />
+  </wsdl:message>
+  <wsdl:message name="UploadMappingSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadMappingResponse" />
+  </wsdl:message>
+  <wsdl:message name="STCCOMPANYMasterSoapIn">
+    <wsdl:part name="parameters" element="tns:STCCOMPANYMaster" />
+  </wsdl:message>
+  <wsdl:message name="STCCOMPANYMasterSoapOut">
+    <wsdl:part name="parameters" element="tns:STCCOMPANYMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="STCCONSIGNEEMasterSoapIn">
+    <wsdl:part name="parameters" element="tns:STCCONSIGNEEMaster" />
+  </wsdl:message>
+  <wsdl:message name="STCCONSIGNEEMasterSoapOut">
+    <wsdl:part name="parameters" element="tns:STCCONSIGNEEMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="STCGTINMasterSoapIn">
+    <wsdl:part name="parameters" element="tns:STCGTINMaster" />
+  </wsdl:message>
+  <wsdl:message name="STCGTINMasterSoapOut">
+    <wsdl:part name="parameters" element="tns:STCGTINMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="STCLABEL_DESIGNMasterSoapIn">
+    <wsdl:part name="parameters" element="tns:STCLABEL_DESIGNMaster" />
+  </wsdl:message>
+  <wsdl:message name="STCLABEL_DESIGNMasterSoapOut">
+    <wsdl:part name="parameters" element="tns:STCLABEL_DESIGNMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="STCLABELTYPEMasterSoapIn">
+    <wsdl:part name="parameters" element="tns:STCLABELTYPEMaster" />
+  </wsdl:message>
+  <wsdl:message name="STCLABELTYPEMasterSoapOut">
+    <wsdl:part name="parameters" element="tns:STCLABELTYPEMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="STCLINEMasterSoapIn">
+    <wsdl:part name="parameters" element="tns:STCLINEMaster" />
+  </wsdl:message>
+  <wsdl:message name="STCLINEMasterSoapOut">
+    <wsdl:part name="parameters" element="tns:STCLINEMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="STCLINETYPEMasterSoapIn">
+    <wsdl:part name="parameters" element="tns:STCLINETYPEMaster" />
+  </wsdl:message>
+  <wsdl:message name="STCLINETYPEMasterSoapOut">
+    <wsdl:part name="parameters" element="tns:STCLINETYPEMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="STCPACKINGLEVELMasterSoapIn">
+    <wsdl:part name="parameters" element="tns:STCPACKINGLEVELMaster" />
+  </wsdl:message>
+  <wsdl:message name="STCPACKINGLEVELMasterSoapOut">
+    <wsdl:part name="parameters" element="tns:STCPACKINGLEVELMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="STCPLANTMasterSoapIn">
+    <wsdl:part name="parameters" element="tns:STCPLANTMaster" />
+  </wsdl:message>
+  <wsdl:message name="STCPLANTMasterSoapOut">
+    <wsdl:part name="parameters" element="tns:STCPLANTMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="STCPRINTERMasterSoapIn">
+    <wsdl:part name="parameters" element="tns:STCPRINTERMaster" />
+  </wsdl:message>
+  <wsdl:message name="STCPRINTERMasterSoapOut">
+    <wsdl:part name="parameters" element="tns:STCPRINTERMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="STCPRINTMETHODMasterSoapIn">
+    <wsdl:part name="parameters" element="tns:STCPRINTMETHODMaster" />
+  </wsdl:message>
+  <wsdl:message name="STCPRINTMETHODMasterSoapOut">
+    <wsdl:part name="parameters" element="tns:STCPRINTMETHODMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="STCUSERMasterSoapIn">
+    <wsdl:part name="parameters" element="tns:STCUSERMaster" />
+  </wsdl:message>
+  <wsdl:message name="STCUSERMasterSoapOut">
+    <wsdl:part name="parameters" element="tns:STCUSERMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="STCUSERROLESMasterSoapIn">
+    <wsdl:part name="parameters" element="tns:STCUSERROLESMaster" />
+  </wsdl:message>
+  <wsdl:message name="STCUSERROLESMasterSoapOut">
+    <wsdl:part name="parameters" element="tns:STCUSERROLESMasterResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CTSLinkSaveBatchDT">
+      <wsdl:input message="tns:CTSLinkSaveBatchDTSoapIn" />
+      <wsdl:output message="tns:CTSLinkSaveBatchDTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LinkGenHdrDt">
+      <wsdl:input message="tns:LinkGenHdrDtSoapIn" />
+      <wsdl:output message="tns:LinkGenHdrDtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LinkSecTransDt">
+      <wsdl:input message="tns:LinkSecTransDtSoapIn" />
+      <wsdl:output message="tns:LinkSecTransDtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LinkTerTransDt">
+      <wsdl:input message="tns:LinkTerTransDtSoapIn" />
+      <wsdl:output message="tns:LinkTerTransDtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LinkSecRejDt">
+      <wsdl:input message="tns:LinkSecRejDtSoapIn" />
+      <wsdl:output message="tns:LinkSecRejDtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LinkTerRejDt">
+      <wsdl:input message="tns:LinkTerRejDtSoapIn" />
+      <wsdl:output message="tns:LinkTerRejDtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LinkTransBytesDt">
+      <wsdl:input message="tns:LinkTransBytesDtSoapIn" />
+      <wsdl:output message="tns:LinkTransBytesDtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LinkRelationDt">
+      <wsdl:input message="tns:LinkRelationDtSoapIn" />
+      <wsdl:output message="tns:LinkRelationDtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LinkInwardDt">
+      <wsdl:input message="tns:LinkInwardDtSoapIn" />
+      <wsdl:output message="tns:LinkInwardDtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LinkOutWardDt">
+      <wsdl:input message="tns:LinkOutWardDtSoapIn" />
+      <wsdl:output message="tns:LinkOutWardDtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadMapping">
+      <wsdl:input message="tns:UploadMappingSoapIn" />
+      <wsdl:output message="tns:UploadMappingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="STCCOMPANYMaster">
+      <wsdl:input message="tns:STCCOMPANYMasterSoapIn" />
+      <wsdl:output message="tns:STCCOMPANYMasterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="STCCONSIGNEEMaster">
+      <wsdl:input message="tns:STCCONSIGNEEMasterSoapIn" />
+      <wsdl:output message="tns:STCCONSIGNEEMasterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="STCGTINMaster">
+      <wsdl:input message="tns:STCGTINMasterSoapIn" />
+      <wsdl:output message="tns:STCGTINMasterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="STCLABEL_DESIGNMaster">
+      <wsdl:input message="tns:STCLABEL_DESIGNMasterSoapIn" />
+      <wsdl:output message="tns:STCLABEL_DESIGNMasterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="STCLABELTYPEMaster">
+      <wsdl:input message="tns:STCLABELTYPEMasterSoapIn" />
+      <wsdl:output message="tns:STCLABELTYPEMasterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="STCLINEMaster">
+      <wsdl:input message="tns:STCLINEMasterSoapIn" />
+      <wsdl:output message="tns:STCLINEMasterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="STCLINETYPEMaster">
+      <wsdl:input message="tns:STCLINETYPEMasterSoapIn" />
+      <wsdl:output message="tns:STCLINETYPEMasterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="STCPACKINGLEVELMaster">
+      <wsdl:input message="tns:STCPACKINGLEVELMasterSoapIn" />
+      <wsdl:output message="tns:STCPACKINGLEVELMasterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="STCPLANTMaster">
+      <wsdl:input message="tns:STCPLANTMasterSoapIn" />
+      <wsdl:output message="tns:STCPLANTMasterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="STCPRINTERMaster">
+      <wsdl:input message="tns:STCPRINTERMasterSoapIn" />
+      <wsdl:output message="tns:STCPRINTERMasterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="STCPRINTMETHODMaster">
+      <wsdl:input message="tns:STCPRINTMETHODMasterSoapIn" />
+      <wsdl:output message="tns:STCPRINTMETHODMasterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="STCUSERMaster">
+      <wsdl:input message="tns:STCUSERMasterSoapIn" />
+      <wsdl:output message="tns:STCUSERMasterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="STCUSERROLESMaster">
+      <wsdl:input message="tns:STCUSERROLESMasterSoapIn" />
+      <wsdl:output message="tns:STCUSERROLESMasterSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CTSLinkSaveBatchDT">
+      <soap:operation soapAction="http://tempuri.org/CTSLinkSaveBatchDT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkGenHdrDt">
+      <soap:operation soapAction="http://tempuri.org/LinkGenHdrDt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkSecTransDt">
+      <soap:operation soapAction="http://tempuri.org/LinkSecTransDt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkTerTransDt">
+      <soap:operation soapAction="http://tempuri.org/LinkTerTransDt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkSecRejDt">
+      <soap:operation soapAction="http://tempuri.org/LinkSecRejDt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkTerRejDt">
+      <soap:operation soapAction="http://tempuri.org/LinkTerRejDt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkTransBytesDt">
+      <soap:operation soapAction="http://tempuri.org/LinkTransBytesDt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkRelationDt">
+      <soap:operation soapAction="http://tempuri.org/LinkRelationDt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkInwardDt">
+      <soap:operation soapAction="http://tempuri.org/LinkInwardDt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkOutWardDt">
+      <soap:operation soapAction="http://tempuri.org/LinkOutWardDt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadMapping">
+      <soap:operation soapAction="http://tempuri.org/UploadMapping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="STCCOMPANYMaster">
+      <soap:operation soapAction="http://tempuri.org/STCCOMPANYMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="STCCONSIGNEEMaster">
+      <soap:operation soapAction="http://tempuri.org/STCCONSIGNEEMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="STCGTINMaster">
+      <soap:operation soapAction="http://tempuri.org/STCGTINMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="STCLABEL_DESIGNMaster">
+      <soap:operation soapAction="http://tempuri.org/STCLABEL_DESIGNMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="STCLABELTYPEMaster">
+      <soap:operation soapAction="http://tempuri.org/STCLABELTYPEMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="STCLINEMaster">
+      <soap:operation soapAction="http://tempuri.org/STCLINEMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="STCLINETYPEMaster">
+      <soap:operation soapAction="http://tempuri.org/STCLINETYPEMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="STCPACKINGLEVELMaster">
+      <soap:operation soapAction="http://tempuri.org/STCPACKINGLEVELMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="STCPLANTMaster">
+      <soap:operation soapAction="http://tempuri.org/STCPLANTMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="STCPRINTERMaster">
+      <soap:operation soapAction="http://tempuri.org/STCPRINTERMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="STCPRINTMETHODMaster">
+      <soap:operation soapAction="http://tempuri.org/STCPRINTMETHODMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="STCUSERMaster">
+      <soap:operation soapAction="http://tempuri.org/STCUSERMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="STCUSERROLESMaster">
+      <soap:operation soapAction="http://tempuri.org/STCUSERROLESMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CTSLinkSaveBatchDT">
+      <soap12:operation soapAction="http://tempuri.org/CTSLinkSaveBatchDT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkGenHdrDt">
+      <soap12:operation soapAction="http://tempuri.org/LinkGenHdrDt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkSecTransDt">
+      <soap12:operation soapAction="http://tempuri.org/LinkSecTransDt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkTerTransDt">
+      <soap12:operation soapAction="http://tempuri.org/LinkTerTransDt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkSecRejDt">
+      <soap12:operation soapAction="http://tempuri.org/LinkSecRejDt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkTerRejDt">
+      <soap12:operation soapAction="http://tempuri.org/LinkTerRejDt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkTransBytesDt">
+      <soap12:operation soapAction="http://tempuri.org/LinkTransBytesDt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkRelationDt">
+      <soap12:operation soapAction="http://tempuri.org/LinkRelationDt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkInwardDt">
+      <soap12:operation soapAction="http://tempuri.org/LinkInwardDt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkOutWardDt">
+      <soap12:operation soapAction="http://tempuri.org/LinkOutWardDt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadMapping">
+      <soap12:operation soapAction="http://tempuri.org/UploadMapping" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="STCCOMPANYMaster">
+      <soap12:operation soapAction="http://tempuri.org/STCCOMPANYMaster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="STCCONSIGNEEMaster">
+      <soap12:operation soapAction="http://tempuri.org/STCCONSIGNEEMaster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="STCGTINMaster">
+      <soap12:operation soapAction="http://tempuri.org/STCGTINMaster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="STCLABEL_DESIGNMaster">
+      <soap12:operation soapAction="http://tempuri.org/STCLABEL_DESIGNMaster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="STCLABELTYPEMaster">
+      <soap12:operation soapAction="http://tempuri.org/STCLABELTYPEMaster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="STCLINEMaster">
+      <soap12:operation soapAction="http://tempuri.org/STCLINEMaster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="STCLINETYPEMaster">
+      <soap12:operation soapAction="http://tempuri.org/STCLINETYPEMaster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="STCPACKINGLEVELMaster">
+      <soap12:operation soapAction="http://tempuri.org/STCPACKINGLEVELMaster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="STCPLANTMaster">
+      <soap12:operation soapAction="http://tempuri.org/STCPLANTMaster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="STCPRINTERMaster">
+      <soap12:operation soapAction="http://tempuri.org/STCPRINTERMaster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="STCPRINTMETHODMaster">
+      <soap12:operation soapAction="http://tempuri.org/STCPRINTMETHODMaster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="STCUSERMaster">
+      <soap12:operation soapAction="http://tempuri.org/STCUSERMaster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="STCUSERROLESMaster">
+      <soap12:operation soapAction="http://tempuri.org/STCUSERROLESMaster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://localhost/DGFT_Central/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://localhost/DGFT_Central/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

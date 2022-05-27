@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DGFT_WebService", ".", "{D2FAAB68-C307-4452-B008-54462E7BA36B}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/DGFT_WebService"
+		Debug.AspNetCompiler.PhysicalPath = "D:\Shalina\DGFT_WebService\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\DGFT_WebService\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/DGFT_WebService"
+		Release.AspNetCompiler.PhysicalPath = "D:\Shalina\DGFT_WebService\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\DGFT_WebService\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1252"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2FAAB68-C307-4452-B008-54462E7BA36B}.Debug|.NET.ActiveCfg = Debug|.NET
+		{D2FAAB68-C307-4452-B008-54462E7BA36B}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
